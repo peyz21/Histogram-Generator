@@ -59,16 +59,18 @@ function updateCounts() {
     // For each grade in grades, increment the corresponding count
     grades.forEach((grade) => {
       for (let i = order.length - 1; i >= 0; i--) {
-        // If the grade falls within the current boundary, increment the count for that boundary
-        if (
-          grade >= bounds[order[i]] &&
-          (i == 0 || grade < bounds[order[i - 1]])
-        ) {
-          counts[order[i]]++;
-          break;
-        }
+          // Check if the grade is between current and previous grade
+          // Additionally, consider 'Max' as 'A+' category
+          if (grade >= bounds[order[i]] && (i == 0 || grade < bounds[order[i - 1]]) || (order[i] == 'Max' && grade == bounds['Max'])) {
+              if(order[i] == 'Max'){
+                  counts["A+"]++;
+              } else {
+                  counts[order[i]]++;
+              }
+              break;
+          }
       }
-    });
+  });
   
     // Update totalGrades to reflect any changes in the grades array
     totalGrades = grades.length;
