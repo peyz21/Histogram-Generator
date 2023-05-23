@@ -1,5 +1,5 @@
 // I want to make a disclaimer, I used chatGPT at the end for assisting me wtih my  SPAN tags in the div of my histogram, also i used it to make..
-// the modal, so i work on the aesthetic part of the assignment also so i can comment my code in case the grading TA needed a commented code! thanks!
+// the modal, since the Aesthetic of the work of the assignment also matters, also GPT helped me so that I can i can comment my code better! thanks!
 
 // Initial array of grades
 var grades = [
