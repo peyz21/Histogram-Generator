@@ -19,7 +19,7 @@ header {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding-left: 25px;
+  padding-left: 20px;
   width: 50%;
   background-color: #e9eff1;
   margin-right: 10px;
@@ -28,7 +28,7 @@ header {
 }
 .right-column {
   flex: 1;
-  width: 50%;
+  width: 50vw;
   display: flex;
   flex-direction: column;
   margin-left: 10px;
@@ -38,17 +38,18 @@ header {
   flex: 1;
   flex-direction: column;
   display: flex;
-  min-width: 0;
+  width: 100%;
   height: 75%;
   background-color: #e9eff1;
   margin-bottom: 5px;
-  padding-left: 20px;
+  padding-left: 15px;
 }
 .right-bottom {
   height: 25%;
   background-color: #e9eff1;
+  width: 100%;
   margin-top: 5px;
-  padding-left: 10px;
+  padding-left: 15px;
   padding-top: 10px;
 }
 
@@ -65,14 +66,19 @@ header {
 }
 
 .table2 {
+  table-layout: fixed;
   max-width: 100%;
-  margin-left: 25px;
+  margin-left: 1vw;
   width: 90%;
-
   height: auto;
 }
 
+.table2 tr{
+  display: flex;
+}
+
 .table2 td {
+  flex: 1;
   padding: 3px;
 }
 
@@ -84,7 +90,7 @@ header {
 
 .animated-progress {
   max-width: 100%;
-  width: 17rem;
+  width: 100%;
   height: 15px;
   border-radius: 5px;
   margin: 2px 2px;
