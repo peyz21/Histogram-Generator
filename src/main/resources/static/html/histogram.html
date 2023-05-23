@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/histogram.css" />
+    <script src="../javaScript/calculate.js" defer></script>
+
+    <title>Histogram Generator</title>
+  </head>
+
+  <body>
+    <header><h1>Histogram Generator</h1></header>
+    <main>
+      <div class="left-column">
+        <h2>Lower Bounds</h2>
+        <form action="">
+          <table class="table1">
+            <tbody>
+              <tr>
+                <td>Max</td>
+                <td>
+                  <input
+                    class="inputField"
+                    min="0"
+                    max="999.99"
+                    type="number"
+                    name="Max"
+                    id="Max"
+                    step="0.01"
+                    placeholder="Ex:100.00"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>A+</td>
+                <td>
+                  <input
+                    class="inputField"
+                    min="0"
+                    max="999.99"
+                    type="number"
+                    name="A+"
+                    id="A+"
+                    step="0.01"
+                    placeholder="Ex:95.00"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="A">A</label></td>
+                <td>
+                  <input
+                    class="inputField"
+                    min="0"
+                    max="999.99"
+                    type="number"
+                    name="A"
+                    id="A"
+                    step="0.01"
+                    placeholder="Ex:90.00"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="A-">A-</label></td>
+                <td>
+                  <input
+                    class="inputField"
+                    min="0"
+                    max="999.99"
+                    type="number"
+                    name="A-"
+                    id="A-"
+                    step="0.01"
+                    placeholder="Ex:85.00"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="B+">B+</label></td>
+                <td>
+                  <input
+                    class="inputField"
+                    min="0"
+                    max="999.99"
+                    type="number"
+                    name="B+"
+                    id="B+"
+                    step="0.01"
+                    placeholder="Ex:80.00"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="B">B</label></td>
+                <td>
+                  <input
+                    class="inputField"
+                    min="0"
+                    max="999.99"
+                    type="number"
+                    name="B"
+                    id="B"
+                    step="0.01"
+                    placeholder="Ex:75.00"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="B-">B-</label></td>
+                <td>
+                  <input
+                    class="inputField"
+                    min="0"
+                    max="999.99"
+                    type="number"
+                    name="B-"
+                    id="B-"
+                    step="0.01"
+                    placeholder="Ex:70.00"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="C+">C+</label></td>
+                <td>
+                  <input
+                    class="inputField"
+                    min="0"
+                    max="999.99"
+                    type="number"
+                    name="C+"
+                    id="C+"
+                    step="0.01"
+                    placeholder="Ex:65.00"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="C">C</label></td>
+                <td>
+                  <input
+                    min="0"
+                    class="inputField"
+                    max="999.99"
+                    type="number"
+                    name="C"
+                    id="C"
+                    step="0.01"
+                    placeholder="Ex:60.00"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="C-">C-</label></td>
+                <td>
+                  <input
+                    class="inputField"
+                    min="0"
+                    max="999.99"
+                    type="number"
+                    name="C-"
+                    id="C-"
+                    step="0.01"
+                    placeholder="Ex:55.00"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="D">D</label></td>
+                <td>
+                  <input
+                    class="inputField"
+                    min="0"
+                    max="999.99"
+                    type="number"
+                    name="D"
+                    id="D"
+                    step="0.01"
+                    placeholder="Ex:50.00"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="F">F</label></td>
+                <td>
+                  <input
+                    class="inputField"
+                    min="0"
+                    max="999.99"
+                    type="number"
+                    name="F"
+                    id="F"
+                    step="0.01"
+                    placeholder="Ex:0.00"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+      <div class="right-column">
+        <section class="right-top">
+          <h2>Histogram</h2>
+          <table class="table2">
+            <tbody>
+              <tr>
+                <td>A+</td>
+                <td class="histogram">
+                  <div class="animated-progress progress-Aplus">
+                    <span data-progress="0"></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>A</td>
+                <td class="histogram">
+                  <div class="animated-progress progress-A">
+                    <span data-progress="0"></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>A-</td>
+                <td class="histogram">
+                  <div class="animated-progress progress-Aminus">
+                    <span data-progress="0"></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>B+</td>
+                <td class="histogram">
+                  <div class="animated-progress progress-Bplus">
+                    <span data-progress="0"></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>B</td>
+                <td class="histogram">
+                  <div class="animated-progress progress-B">
+                    <span data-progress="0"></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>B-</td>
+                <td class="histogram">
+                  <div class="animated-progress progress-Bminus">
+                    <span data-progress="0"></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>C+</td>
+                <td class="histogram">
+                  <div class="animated-progress progress-Cplus">
+                    <span data-progress="0"></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>C</td>
+                <td class="histogram">
+                  <div class="animated-progress progress-C">
+                    <span data-progress="0"></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>C-</td>
+                <td class="histogram">
+                  <div class="animated-progress progress-Cminus">
+                    <span data-progress="0"></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>D</td>
+                <td class="histogram">
+                  <div class="animated-progress progress-D">
+                    <span data-progress="0"></span>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>F</td>
+                <td class="histogram">
+                  <div class="animated-progress progress-F">
+                    <span data-progress="0"></span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="right-bottom">
+          <div class="input-holder">
+            <label for="newGrade">New Grade:</label>
+            <input
+              type="number"
+              min="0"
+              max="999.99"
+              name="newGrade"
+              id=""
+              disabled
+            />
+            <br />
+            <button type="submit" class="button-35">Add Grade</button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- modal written with assisted help -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modalText">Some text in the Modal..</p>
+      </div>
+    </div>
+  </body>
+</html>
