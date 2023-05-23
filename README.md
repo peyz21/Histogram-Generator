@@ -11,4 +11,4 @@ and after adding the bounds it should display the distribution of the grades in 
 I tried to focus on the visualization aspects along side with the error handling and simple Validations.
 Please visit the deployed final work on :
 
-[histogram-generator-production.up.railway.app/](https://histogram-generator-production.up.railway.app/html/histogram.html)
+[histogram-generator-production.up.railway.app/html/histogram.html](https://histogram-generator-production.up.railway.app/html/histogram.html)
