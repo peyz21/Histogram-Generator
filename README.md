@@ -7,8 +7,14 @@ and after adding the bounds it should display the distribution of the grades in 
 
 ![image](https://github.com/peyz21/Histogram-Generator/assets/64120482/37909947-38a5-446f-bcf8-af36c382aa0b)
 
+### Demo of the User Workflow
+
+https://github.com/peyz21/Histogram-Generator/assets/64120482/7955992b-188d-431d-b536-8d53e9dd47e3
+
 
 I tried to focus on the visualization aspects along side with the error handling and simple Validations.
 Please visit the deployed final work on :
 
 [histogram-generator-production.up.railway.app/html/histogram.html](https://histogram-generator-production.up.railway.app/html/histogram.html)
+
+
